@@ -13,5 +13,8 @@
             "email": "3b032110@gm.student.ncut.edu.tw"
         }
     ],
-    "require": {}
+    "require": {
+        "monolog/monolog": "^3.4",
+        "nesbot/carbon": "^2.71"
+    }
 }
