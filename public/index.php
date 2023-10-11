@@ -14,3 +14,16 @@ $hello= new Demo\HelloWorld();
 
 use Demo\HelloWorld as World; // 類別另取別名
 $world = new World();
+
+// DEBUG
+use Monolog\Level;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+// Create the logger
+$logger = new Logger('WISD');
+// Now add some handlers
+$logger->pushHandler(new StreamHandler('../log/my.log', Level::Debug));
+
+// You can now use your logger
+$logger->info('My logger is now ready');
